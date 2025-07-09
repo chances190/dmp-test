@@ -104,10 +104,10 @@ THE SOFTWARE.
 
 //#define DEBUG
 #ifdef DEBUG
-    #define DEBUG_PRINT(x) std::cout << x   //Serial.print(x)
-    #define DEBUG_PRINTF(x, y) std::cout << x   //Serial.print(x, y)
-    #define DEBUG_PRINTLN(x) std::cout << x << std::endl   //Serial.println(x)
-    #define DEBUG_PRINTLNF(x, y) std::cout << x << std::endl  //Serial.println(x, y)
+    #define DEBUG_PRINT(x)       printf(x)                 //Serial.print(x)
+    #define DEBUG_PRINTF(x, y)   printf(x, y)              //Serial.print(x, y)
+    #define DEBUG_PRINTLN(x)     printf(x);printf("\n")    //Serial.println(x)
+    #define DEBUG_PRINTLNF(x, y) printf(x, y);printf("\n") //Serial.println(x, y)
     #define F(x) x
 #else
     #define DEBUG_PRINT(x)
